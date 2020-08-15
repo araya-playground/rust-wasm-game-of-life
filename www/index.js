@@ -60,10 +60,12 @@ const drawGrid = () => {
 };
 
 const renderLoop = () => {
-  universe.tick();
-  drawGrid();
-  drawCells();
-  requestAnimationFrame(renderLoop);
+  setTimeout(() => {
+    universe.tick();
+    drawGrid();
+    drawCells();
+    requestAnimationFrame(renderLoop);
+  }, 500);
 };
 
 drawGrid();
